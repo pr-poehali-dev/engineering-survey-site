@@ -235,6 +235,90 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-secondary mb-6">
+                Обследование зданий и сооружений
+              </h2>
+              <div className="w-24 h-1 bg-primary mb-8"></div>
+              <p className="text-lg text-muted-foreground mb-6">
+                Проводим комплексное техническое обследование зданий и сооружений любой сложности с применением современного оборудования и методик.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="p-2 bg-primary/10 rounded-lg mt-1">
+                    <Icon name="Search" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-secondary mb-1">Визуальное обследование</h3>
+                    <p className="text-sm text-muted-foreground">Осмотр конструктивных элементов, выявление дефектов и повреждений</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="p-2 bg-primary/10 rounded-lg mt-1">
+                    <Icon name="Activity" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-secondary mb-1">Инструментальное обследование</h3>
+                    <p className="text-sm text-muted-foreground">Прочность бетона, арматуры, несущей способности конструкций</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="p-2 bg-primary/10 rounded-lg mt-1">
+                    <Icon name="ClipboardCheck" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-secondary mb-1">Техническое заключение</h3>
+                    <p className="text-sm text-muted-foreground">Оценка технического состояния, рекомендации по усилению и ремонту</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="p-2 bg-primary/10 rounded-lg mt-1">
+                    <Icon name="FileText" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-secondary mb-1">Проектная документация</h3>
+                    <p className="text-sm text-muted-foreground">Разработка проектов усиления и реконструкции объектов</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="p-4 bg-primary/10 rounded-lg w-fit mx-auto mb-3">
+                  <Icon name="Home" size={40} className="text-primary" />
+                </div>
+                <h4 className="font-bold text-2xl text-secondary mb-2">500+</h4>
+                <p className="text-sm text-muted-foreground">Обследованных объектов</p>
+              </Card>
+              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="p-4 bg-primary/10 rounded-lg w-fit mx-auto mb-3">
+                  <Icon name="Award" size={40} className="text-primary" />
+                </div>
+                <h4 className="font-bold text-2xl text-secondary mb-2">15 лет</h4>
+                <p className="text-sm text-muted-foreground">Опыта работы</p>
+              </Card>
+              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="p-4 bg-primary/10 rounded-lg w-fit mx-auto mb-3">
+                  <Icon name="Users" size={40} className="text-primary" />
+                </div>
+                <h4 className="font-bold text-2xl text-secondary mb-2">30+</h4>
+                <p className="text-sm text-muted-foreground">Специалистов</p>
+              </Card>
+              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="p-4 bg-primary/10 rounded-lg w-fit mx-auto mb-3">
+                  <Icon name="Clock" size={40} className="text-primary" />
+                </div>
+                <h4 className="font-bold text-2xl text-secondary mb-2">24/7</h4>
+                <p className="text-sm text-muted-foreground">Техподдержка</p>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="projects" className="py-20 bg-slate-100">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
