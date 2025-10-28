@@ -377,6 +377,91 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-gradient-to-br from-primary/5 to-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-secondary mb-4">Отзывы клиентов</h2>
+            <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            <p className="text-lg text-muted-foreground">
+              Нам доверяют ведущие строительные компании России
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="hover:shadow-xl transition-shadow">
+              <CardContent className="pt-6">
+                <div className="flex items-center space-x-1 mb-4">
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                </div>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  "Профессиональный подход к выполнению работ. Инженерно-геологические изыскания выполнены в срок, качество отчета на высоком уровне. Рекомендуем как надежного партнера."
+                </p>
+                <div className="flex items-center space-x-3 border-t pt-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Icon name="User" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-secondary">Андрей Петров</p>
+                    <p className="text-sm text-muted-foreground">ООО "СтройГрад", Главный инженер</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-shadow">
+              <CardContent className="pt-6">
+                <div className="flex items-center space-x-1 mb-4">
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                </div>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  "Отличная работа по обследованию здания! Специалисты провели комплексное инструментальное обследование, составили подробное заключение. Все четко и по делу."
+                </p>
+                <div className="flex items-center space-x-3 border-t pt-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Icon name="User" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-secondary">Елена Смирнова</p>
+                    <p className="text-sm text-muted-foreground">АО "ПромСтрой", Технический директор</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-shadow">
+              <CardContent className="pt-6">
+                <div className="flex items-center space-x-1 mb-4">
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                </div>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  "Сотрудничаем уже 5 лет. Всегда оперативно, качественно и с соблюдением всех норм. Современное оборудование, квалифицированные специалисты. Спасибо за работу!"
+                </p>
+                <div className="flex items-center space-x-3 border-t pt-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Icon name="User" size={24} className="text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-secondary">Михаил Козлов</p>
+                    <p className="text-sm text-muted-foreground">ЗАО "МегаСтрой", Директор</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="equipment" className="py-20 bg-slate-100">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
