@@ -86,6 +86,30 @@ const Index = () => {
     'Допуск к работам на объектах использования атомной энергии'
   ];
 
+  const testimonials = [
+    {
+      name: 'Алексей Петров',
+      position: 'Главный инженер',
+      company: 'ООО "СтройГрад"',
+      text: 'Сотрудничаем с ГеоПроект уже 5 лет. Высокое качество изысканий, точные сроки, профессиональная команда. Особенно отмечу оперативность и готовность помочь в сложных ситуациях.',
+      rating: 5
+    },
+    {
+      name: 'Мария Соколова',
+      position: 'Директор по развитию',
+      company: 'Группа компаний "Базис"',
+      text: 'Провели обследование 12 зданий для проекта реконструкции. Получили полный комплект документов в срок. Техническая экспертиза на высшем уровне, рекомендуем!',
+      rating: 5
+    },
+    {
+      name: 'Дмитрий Новиков',
+      position: 'Технический директор',
+      company: 'ЗАО "МегаСтрой"',
+      text: 'Профессиональный подход к инженерно-геологическим изысканиям. Современное оборудование, квалифицированные специалисты. Результаты работ всегда соответствуют требованиям проектирования.',
+      rating: 5
+    }
+  ];
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
@@ -387,77 +411,30 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-xl transition-shadow">
-              <CardContent className="pt-6">
-                <div className="flex items-center space-x-1 mb-4">
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                </div>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  "Профессиональный подход к выполнению работ. Инженерно-геологические изыскания выполнены в срок, качество отчета на высоком уровне. Рекомендуем как надежного партнера."
-                </p>
-                <div className="flex items-center space-x-3 border-t pt-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Icon name="User" size={24} className="text-primary" />
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="hover:shadow-xl transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="flex items-center space-x-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Icon key={i} name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
+                    ))}
                   </div>
-                  <div>
-                    <p className="font-semibold text-secondary">Андрей Петров</p>
-                    <p className="text-sm text-muted-foreground">ООО "СтройГрад", Главный инженер</p>
+                  <p className="text-muted-foreground mb-6 leading-relaxed italic">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="flex items-center space-x-3 border-t pt-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Icon name="User" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-secondary">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                      <p className="text-xs text-muted-foreground">{testimonial.position}</p>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-xl transition-shadow">
-              <CardContent className="pt-6">
-                <div className="flex items-center space-x-1 mb-4">
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                </div>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  "Отличная работа по обследованию здания! Специалисты провели комплексное инструментальное обследование, составили подробное заключение. Все четко и по делу."
-                </p>
-                <div className="flex items-center space-x-3 border-t pt-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Icon name="User" size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-secondary">Елена Смирнова</p>
-                    <p className="text-sm text-muted-foreground">АО "ПромСтрой", Технический директор</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-xl transition-shadow">
-              <CardContent className="pt-6">
-                <div className="flex items-center space-x-1 mb-4">
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                  <Icon name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
-                </div>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  "Сотрудничаем уже 5 лет. Всегда оперативно, качественно и с соблюдением всех норм. Современное оборудование, квалифицированные специалисты. Спасибо за работу!"
-                </p>
-                <div className="flex items-center space-x-3 border-t pt-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Icon name="User" size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-secondary">Михаил Козлов</p>
-                    <p className="text-sm text-muted-foreground">ЗАО "МегаСтрой", Директор</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
