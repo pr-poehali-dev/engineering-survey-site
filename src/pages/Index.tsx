@@ -5,10 +5,12 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const { toast } = useToast();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -110,9 +112,63 @@ const Index = () => {
               <a href="#equipment" className="hover:text-primary transition-colors">Оборудование</a>
               <a href="#contact" className="hover:text-primary transition-colors">Контакты</a>
             </div>
-            <Button variant="outline" className="bg-white text-secondary hover:bg-primary hover:text-white">
-              +7 (495) 123-45-67
-            </Button>
+            <div className="hidden md:block">
+              <Button variant="outline" className="bg-white text-secondary hover:bg-primary hover:text-white">
+                +7 (495) 123-45-67
+              </Button>
+            </div>
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="md:hidden text-white">
+                  <Icon name="Menu" size={28} />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="bg-secondary text-white border-secondary">
+                <div className="flex flex-col space-y-6 mt-8">
+                  <a 
+                    href="#services" 
+                    className="text-lg hover:text-primary transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Услуги
+                  </a>
+                  <a 
+                    href="#projects" 
+                    className="text-lg hover:text-primary transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Проекты
+                  </a>
+                  <a 
+                    href="#licenses" 
+                    className="text-lg hover:text-primary transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Лицензии
+                  </a>
+                  <a 
+                    href="#equipment" 
+                    className="text-lg hover:text-primary transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Оборудование
+                  </a>
+                  <a 
+                    href="#contact" 
+                    className="text-lg hover:text-primary transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Контакты
+                  </a>
+                  <div className="pt-4 border-t border-white/20">
+                    <Button className="w-full bg-primary hover:bg-primary/90 text-white">
+                      <Icon name="Phone" size={20} className="mr-2" />
+                      +7 (495) 123-45-67
+                    </Button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </nav>
